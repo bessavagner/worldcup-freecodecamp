@@ -46,4 +46,3 @@ echo "$($PSQL "select games.year, name from teams full join games on teams.team_
 
 echo -e "\nList of teams that start with 'Co':"
 echo "$($PSQL "select distinct(name) from teams left join games on teams.team_id = games.winner_id or teams.team_id = games.opponent_id where name like 'Co%'")"
-echo
